@@ -1,0 +1,167 @@
+\documentclass[10pt,a4paper]{article}
+ 
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{light-gray}{gray}{0.92}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{relsize}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\linespread{1.2}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\textit{Joseph High  \ \  Hopkins ID: 9E1FDC}}
+\lhead{\textit{553.732 HW 3}}
+
+\begin{document}
+\title{EN.553.732 Homework 3}
+\author{Joseph High \ Hopkins ID: 9E1FDC}
+\date{\today}
+\maketitle 
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+ 
+
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+ 
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\begin{problem}{1}
+\text{ }\\
+Here, we are implementing an importance sampler and let  $g(x)\sim Normal(0,1)$. \\
+We can then compute the expected value of the mixture of beta distributions by using the criteria
+$$E(x)=\frac{E_g(x(f(x)/g(x))}{E_g(f(x)/g(x))} $$
+From the corresponding R code (attached) it was found that the expected value is 0.3637159.
+\\
+Moreover, the probability that the random variable is within the interval (0.35,0.55) was found to be 0.1205. 
+\\
+\textit{R code and results are attached}
+
+\end{problem}
+
+
+\begin{problem}{2}
+\begin{proof}
+\text{ }\\
+W.T.S: $P(Y<y)=P(X<x|U<f(x)) $\\
+We first generate $X\sim g$ and $U|X=x\sim U_{[0,Mg(x)]}$\\
+Then, the pdf of U is $P(U|X=x)=\dfrac{1}{Mg(x)}$\\
+Then,
+$$P(U<f(x))= E(P(U<f(x)|x))=E(\int_{0}^{f(x)}\frac{1}{Mg(x)}du)=E(\frac{f(x)}{Mg(x)})=\int_{-\infty}^{\infty}\frac{f(x)}{Mg(x)}g(x)dx$$\\
+$$=\frac{1}{M}\int_{-\infty}^{\infty}f(x)dx
+=\frac{1}{M} \ \ \ \ \ \textrm{(since $f(x)$ a pdf)}$$
+Similarly,
+$$P(U<f(x), X<x)=\int_{-\infty}^{x}P(U<f(x)g(x)dx=\int_{-\infty}^{x}\frac{f(x)}{Mg(x)}g(x)dx$$
+$$=\frac{1}{M}\int_{-\infty}^{x}f(x)dx\\
+=\frac{F(x)}{M}.$$\\
+Finally,\\
+$$P(X<x|U<f(x))=\frac{P(U<f(x),X<x)}{P(U<f(x))} \\
+=\frac{F(x)/M}{1/M}\\
+=F(x)\\
+=P(X<x)\\
+=P(Y<y)$$\\
+Proving that the given algorithm is analogous to the standard Accept-Reject algorithm.
+\end{proof}
+\end{problem}
+
+
+\begin{problem}{3}
+\text{ }\\
+Under the assumption that $\mu$ and $\tau$ are independent, we can write their joint prior distribution as
+$$
+p(\mu,\tau)\sim Beta(2,2)Lognormal(1,10)\ .
+$$
+The data likelihood of $X$ is
+
+$$p(X|\displaystyle \mu,\tau)\sim\prod_{i=1}^{n} Normal(\mu, \tau)$$
+The posterior distribution of $\mu$ and $\tau$ is proportional to the product of the likelihood and prior, so we have:
+
+$$p(\mu,\tau|X)\propto Beta(\mu; 2,2) Lognormal(\displaystyle \tau;1,10)\prod_{i=1}^{n} Normal(x_i; \mu, \tau)$$
+Assuming that the proposal distribution is chosen to be symmetric, we have the Metropolis algorithm. With $t$ iterations, there are two possibilities for $\mu^{(t)}$ and $\tau^{(t)}$: $\mu^{(t)}=\mu^{*}$ and $\tau^{(t)}=\tau^{*}$ with probability $\theta$ and $\mu^{(t)}=\mu^{(t-1)}$ and $\tau^{(t)}=\tau^{(t-1)}$ with probability $1-\theta$, where 
+$$
+\theta=\min(1,\frac{p(\mu^{*},\tau^{*}|X)}{p(\mu^{(t)},\tau^{(t)}|X)})\
+$$
+This is a result of the symmetry of the proposal distribution, i.e. $q(y|z)=q(z|y)$\\
+The posterior probability was found to be $P(\mu\leq 0.5|X)=0.82797$\\
+The trace plots indicate convergence and the ACF plots drop precipitously over time, the desired result.\\ 
+\textit{R code and results are attached}
+
+\end{problem}
+ 
+\begin{problem}{4}
+\text{ }\\
+\textbf{Part a} \ The respective R code, outputs, and graphics are attached. It can be seen that the empirical distribution skews to the right, and so it deviates from a normal distribution. \\
+\\
+\textbf{Part b} \ 
+\\\
+\textit{Solution Reference}: Hoff, Peter D. (2009). \textit{A First Course in Bayesian Statistical Methods}. New York, NY: Springer. 
+\\\
+\\\
+Denote $n_{1}= \sum_{\{i:X_{i}=1\}}1 ,  \ n_{2}= \sum_{\{i:X_{i}=2\}}1, \ n=n_{1}+n_{2}\\  \mathrm{Y}_{1}=\sum_{\{i:X_{i}=1\}}y_{i}$, $ \mathrm{Y}_{2}=\sum_{\{i:X_{i}=2\}}y_{i}.$\\
+\\\
+we then have,
+\\
+$p(X_{i}|p,\ \theta_{1},\ \theta_{2},\ \sigma_{1}^{2},\ \sigma_{2}^{2},\ Y)=\dfrac{p \times normal(\theta_{1},\sigma_{1}^{2})}{p\times normal(\theta_{1},\sigma_{1}^{2})+(1-p)\times normal(\theta_{2},\sigma_{2}^{2})},\ i=1,\ \cdots\ n\\
+p(X|p,\ \theta_{1},\ \theta_{2},\ \sigma_{1}^{2},\ \sigma_{2}^{2},\ Y)=\prod_{i=1}^{n}p(X_{i}|p,\ \theta_{1},\ \theta_{2},\ \sigma_{1}^{2},\ \sigma_{2}^{2},\ Y)\ \\
+p(p|X,\ \theta_{1},\ \theta_{2},\ \sigma_{1}^{2},\ \sigma_{2}^{2},\ Y)\sim beta(a+n_{1},\ b+n_{2})\ \\
+p(\theta_{1}|X,p,\ \theta_{2},\ \sigma_{1}^{2},\ \sigma_{2}^{2},\ Y)\sim normal(\mu_{n},\ \tau_{n}^{2})\ $,
+where $ \mu_{n}=\frac{\mu_{0}/\tau_{0}^{2}+{y}_{1}/\sigma_{1}^{2}}{1/\tau_{0}^{2}+n_{1}/\sigma_{1}^{2}}$ and $ \tau_{n}^{2}=\frac{1}{1/\tau_{0}^{2}+n_{1}/\sigma_{1}^{2}}\\
+p(\theta_{2}|X,p,\ \theta_{1},\ \sigma_{1}^{2},\ \sigma_{2}^{2},\ Y)\sim normal(\mu_{n},\ \tau_{n}^{2})\ $,
+where $ \mu_{n}=\frac{\mu_{0}/\tau_{0}^{2}+{y}_{2}/\sigma_{2}^{2}}{1/\tau_{0}^{2}+n_{2}/\sigma_{2}^{2}}$ and $ \tau_{n}^{2}=\frac{1}{1/\tau_{0}^{2}+n_{2}/\sigma_{2}^{2}}\\
+p(\sigma_{1}^{2}|X,p,\ \theta_{1},\ \theta_{2},\ \sigma_{2}^{2},\ Y)\sim inverse-gamma(\nu_{n}/2,\ \nu_{n}\sigma_{n}^{2}/2)$ , where $\nu_{n}=\nu_{0}+n_{1}$ and $ \sigma_{n}^{2}=\frac{1}{\nu_{n}}(\nu_{0}\sigma_{0}^{2}+\sum_{\{i:X_{i}=1\}}(y_{i}-\theta_{1})^{2}) \\
+p(\sigma_{2}^{2}|X,p,\ \theta_{1},\ \theta_{2},\ \sigma_{1}^{2},\ Y)\sim inverse-gamma(\nu_{n}/2,\ \nu_{n}\sigma_{n}^{2}/2)$ , where $\nu_{n}=\nu_{0}+n_{2}$ and $ \sigma_{n}^{2}=\frac{1}{\nu_{n}}(\nu_{0}\sigma_{0}^{2}+\sum_{\{i:X_{i}=2\}}(y_{i}-\theta_{2})^{2})$ \\
+\\\
+\textbf{Part c} Referring to the R code, plots and outputs, the ACF has a steep decline with respect to the increase in time - a desired result. The effective sample size for $\theta_{(1)}^{(s)}$ was found to be 418.4169 while the effective sample size for $\theta_{(2)}^{(s)}$ was found to be 230.2658. \\
+\textit{R code and results are attached}
+\\\
+\\\
+\textbf{Part d} From the histogram (attached) and the density found in part a, we see that they are very similar. In particular, both are right skewed. 
+
+\end{problem}
+
+
+\begin{problem}{5}
+\text{ }\\
+\textbf{Part 1} We first note that the likelihood of $\theta=(\theta_1,\theta_2,\theta_3,\theta_4)$ is
+$$\mathcal{L}(\theta|x,n,y)=\prod_{j=1}^{4}(logit^{-1}(\alpha+\beta x_j))^{y_j}(1-logit^{-1}(\alpha+\beta x_j))^{n_j-y_j} $$\\
+where $x, n, \textrm{and}\ y$ represent the respective data vectors. For parts 1-4, $\alpha$ and $\beta$have $Normal(0,10^2)$ prior distributions. However, for part 1, we let $\beta$ = 10.\\
+So for the posterior, we obtain:
+$$p(\theta|x,n,y)\propto Normal(\alpha;0,10^2)\prod_{j=1}^{4}(logit^{-1}(\alpha+\beta x_j))^{y_j}(1-logit^{-1}(\alpha+\beta x_j))^{n_j-y_j}$$
+Of course, $\alpha$ could change depending on the iteration. Note that we are picking symmetric normal jumps for $\alpha$. For the entirety of this problem, let us pick symmetric normal jumps of $Norm(0,1)$. So then, $\alpha^{*}=\alpha^{(t-1)}+\varepsilon$, where $\varepsilon\sim Norm(0,1)$\\ 
+In other words, we can say $\alpha^{*}\sim Normal(\alpha^{(t-1)},1)$\\
+\ \ \textit{R code and results are attached}. \\
+\textbf{Part 2} \ This part is similar to part 1; however, now $\beta$ is not fixed. 
+\\\
+Since $\alpha$ and $\beta$ independent, the posterior is \\
+$$p(\theta|x,n,y)=Norm(\beta;0,10^2)Norm(\alpha;0,10^2)\prod_{j=1}^{4}(logit^{-1}(\alpha+\beta x_j))^{y_j}(1-logit^{-1}(\alpha+\beta x_j))^{n_j-y_j}$$
+Similar to part a, we are picking symmetric normal jumps of $Norm(0,1)$, but this time we are iterating for $\alpha$ and $\beta$.  
+\\\
+\ \ \textit{R code and results are attached}.
+\\
+\textbf{Part 3} While similar to parts 1 and 2, there is a difference in how we pick the jump. We let $\theta^{*}\sim Normal(\theta^{(t-1)},I)$, so we jump $\alpha$ and $\beta$ together instead of separately as in part b.
+\\\
+\textit{R code and results are attached}.\\
+\textbf{Part 4} This part was similar to parts 1 - 3. The difference is in how we jump, which moves us in the direction of the mode. This would presumably give us faster convergence. In accordance with the definition of $\theta^{*}|\theta^{t}$ given in the problem, we let $\delta=1$ and the covariance matrix = $I$.
+\\\
+\textit{R code and results are attached}.\\
+\textbf{Part 5} While the efficiency of part 2 and part 3 are similar, there are differences.  In particular, in part 2, we  jump $\alpha$ and $\beta$ separately, while in part 3 we jump them simultaneously using a bivariate normal distribution. Referring to the ACF and trace plots, there is no significant improvement in efficiency for $\alpha$. On the other hand, for $\beta$,  the method in part 2 is noticeably more efficient in terms of convergence compared to the method in part 3. Indeed, if we refer to the corresponding ACF, it decreases faster for $\beta$ in part 2 compared to that of part 3. The trace plot for $\beta$ in part 2 also shows stronger convergence when compared to the trace plot for $\beta$ in part 3. This was to be expected since in part 2 we first jump $\alpha$ and then $\beta$ with $\alpha$ already updated, subsequently resulting in more efficient convergence for $\beta$. However, in part 3, this was not the case since we jumped them simultaneously.\\ The algorithm in part 4 is significantly more efficient than part 2 and 3, as expected. This can be observed in the ACF, which vanishes after only a few lag times. Moreover, the corresponding trace plot displays stronger efficiency and strong convergence. This was also to be expected since the algorithm in part 4 moves in the direction of the mode, resulting in faster convergence of our parameters. 
+\end{problem}
+
+\end{document}
