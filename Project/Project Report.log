@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  13 APR 2020 01:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  29 APR 2020 05:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -424,80 +424,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--49
 
  []
 
-
-LaTeX Warning: File `/Users/joehigh/Desktop/"Bayesian Statistics"/Bayesian_Proj
-ect/DataVisHistogram.jpeg' not found on input line 58.
-
-
-! Package pdftex.def Error: File `/Users/joehigh/Desktop/"Bayesian Statistics"/
-Bayesian_Project/DataVisHistogram.jpeg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.58 ...s"/Bayesian_Project/DataVisHistogram.jpeg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `/Users/joehigh/Desktop/"Bayesian Statistics"/Bayesian_Proj
-ect/PastTrajectories.jpeg' not found on input line 63.
-
-
-! Package pdftex.def Error: File `/Users/joehigh/Desktop/"Bayesian Statistics"/
-Bayesian_Project/PastTrajectories.jpeg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.63 ...s"/Bayesian_Project/PastTrajectories.jpeg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<../DataVisHistogram.jpeg, id=13, 467.7475pt x 433.62pt>
+File: ../DataVisHistogram.jpeg Graphic file (type jpg)
+<use ../DataVisHistogram.jpeg>
+Package pdftex.def Info: ../DataVisHistogram.jpeg  used on input line 58.
+(pdftex.def)             Requested size: 213.39641pt x 213.39536pt.
+<../PastTrajectories.jpeg, id=14, 467.7475pt x 433.62pt>
+File: ../PastTrajectories.jpeg Graphic file (type jpg)
+<use ../PastTrajectories.jpeg>
+Package pdftex.def Info: ../PastTrajectories.jpeg  used on input line 63.
+(pdftex.def)             Requested size: 213.39641pt x 213.39536pt.
 
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 57--67
 []$[]$ $[]$ 
  []
 
 [2]
+<../freqsummary.png, id=25, 393.47pt x 408.52625pt>
+File: ../freqsummary.png Graphic file (type png)
+<use ../freqsummary.png>
+Package pdftex.def Info: ../freqsummary.png  used on input line 75.
+(pdftex.def)             Requested size: 227.61836pt x 227.62616pt.
 
-! LaTeX Error: File `/Users/joehigh/Desktop/"Bayesian Statistics"/Bayesian_Proj
-ect/freqsummary' not found.
+Overfull \hbox (1.13441pt too wide) in paragraph at lines 75--76
+[][] 
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.75 ... Statistics"/Bayesian_Project/freqsummary}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<../Freqfit_vs_truth.jpeg, id=27, 467.7475pt x 433.62pt>
+File: ../Freqfit_vs_truth.jpeg Graphic file (type jpg)
+<use ../Freqfit_vs_truth.jpeg>
+Package pdftex.def Info: ../Freqfit_vs_truth.jpeg  used on input line 80.
+(pdftex.def)             Requested size: 227.62094pt x 227.62082pt.
 
-
-LaTeX Warning: File `/Users/joehigh/Desktop/"Bayesian Statistics"/Bayesian_Proj
-ect/Freqfit_vs_truth.jpeg' not found on input line 80.
-
-
-! Package pdftex.def Error: File `/Users/joehigh/Desktop/"Bayesian Statistics"/
-Bayesian_Project/Freqfit_vs_truth.jpeg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.80 ...s"/Bayesian_Project/Freqfit_vs_truth.jpeg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (1.15173pt too wide) in paragraph at lines 80--81
+Overfull \hbox (1.137pt too wide) in paragraph at lines 80--81
 [][] 
  []
 
@@ -506,40 +465,23 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 74--84
 []$[]$ $[]$ 
  []
 
+<../freqsummary2.png, id=28, 364.36125pt x 369.38pt>
+File: ../freqsummary2.png Graphic file (type png)
+<use ../freqsummary2.png>
+Package pdftex.def Info: ../freqsummary2.png  used on input line 91.
+(pdftex.def)             Requested size: 227.61958pt x 227.62106pt.
 
-! LaTeX Error: File `/Users/joehigh/Desktop/"Bayesian Statistics"/Bayesian_Proj
-ect/freqsummary2' not found.
+Overfull \hbox (1.13564pt too wide) in paragraph at lines 91--92
+[][] 
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.91 ...Statistics"/Bayesian_Project/freqsummary2}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<../Freqfit2.jpeg, id=29, 478.78876pt x 430.60875pt>
+File: ../Freqfit2.jpeg Graphic file (type jpg)
+<use ../Freqfit2.jpeg>
+Package pdftex.def Info: ../Freqfit2.jpeg  used on input line 96.
+(pdftex.def)             Requested size: 227.62427pt x 227.62361pt.
 
-
-LaTeX Warning: File `/Users/joehigh/Desktop/"Bayesian Statistics"/Bayesian_Proj
-ect/Freqfit2.jpeg' not found on input line 96.
-
-
-! Package pdftex.def Error: File `/Users/joehigh/Desktop/"Bayesian Statistics"/
-Bayesian_Project/Freqfit2.jpeg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.96 ...tatistics"/Bayesian_Project/Freqfit2.jpeg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (1.15173pt too wide) in paragraph at lines 96--97
+Overfull \hbox (1.14032pt too wide) in paragraph at lines 96--97
 [][] 
  []
 
@@ -548,77 +490,33 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 90--100
 []$[]$ $[]$ 
  []
 
-[3]
+[3 <../DataVisHistogram.jpeg> <../PastTrajectories.jpeg> <../freqsummary.png> <
+../Freqfit_vs_truth.jpeg>]
+<../PredictedTrajectories.jpeg, id=34, 467.7475pt x 433.62pt>
+File: ../PredictedTrajectories.jpeg Graphic file (type jpg)
+<use ../PredictedTrajectories.jpeg>
+Package pdftex.def Info: ../PredictedTrajectories.jpeg  used on input line 107.
 
-LaTeX Warning: File `/Users/joehigh/Desktop/"Bayesian Statistics"/Bayesian_Proj
-ect/PredictedTrajectories.jpeg' not found on input line 107.
-
-
-! Package pdftex.def Error: File `/Users/joehigh/Desktop/"Bayesian Statistics"/
-Bayesian_Project/PredictedTrajectories.jpeg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.107 ...esian_Project/PredictedTrajectories.jpeg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `/Users/joehigh/Desktop/"Bayesian Statistics"/Bayesian_Proj
-ect/FreqResult.jpeg' not found on input line 115.
-
-
-! Package pdftex.def Error: File `/Users/joehigh/Desktop/"Bayesian Statistics"/
-Bayesian_Project/FreqResult.jpeg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.115 ...istics"/Bayesian_Project/FreqResult.jpeg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[4]
-
-LaTeX Warning: File `/Users/joehigh/Desktop/"Bayesian Statistics"/Bayesian_Proj
-ect/ACFPlot.png' not found on input line 123.
-
-
-! Package pdftex.def Error: File `/Users/joehigh/Desktop/"Bayesian Statistics"/
-Bayesian_Project/ACFPlot.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.123 ...Statistics"/Bayesian_Project/ACFPlot.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `/Users/joehigh/Desktop/"Bayesian Statistics"/Bayesian_Proj
-ect/BayesianPredictionPlot.jpeg' not found on input line 131.
-
-
-! Package pdftex.def Error: File `/Users/joehigh/Desktop/"Bayesian Statistics"/
-Bayesian_Project/BayesianPredictionPlot.jpeg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.131 ...sian_Project/BayesianPredictionPlot.jpeg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[5] [6] [7] [8] [9] [10] (./Project Report.aux)
+(pdftex.def)             Requested size: 256.08426pt x 256.085pt.
+<../FreqResult.jpeg, id=35, 467.7475pt x 433.62pt>
+File: ../FreqResult.jpeg Graphic file (type jpg)
+<use ../FreqResult.jpeg>
+Package pdftex.def Info: ../FreqResult.jpeg  used on input line 115.
+(pdftex.def)             Requested size: 256.08426pt x 256.085pt.
+ [4 <../freqsummary2.png> <../Freqfit2.jpeg> <../PredictedTrajectories.jpeg>]
+<../ACFPlot.png, id=40, 449.68pt x 420.57124pt>
+File: ../ACFPlot.png Graphic file (type png)
+<use ../ACFPlot.png>
+Package pdftex.def Info: ../ACFPlot.png  used on input line 123.
+(pdftex.def)             Requested size: 256.08696pt x 256.0732pt.
+<../BayesianPredictionPlot.jpeg, id=41, 478.78876pt x 431.6125pt>
+File: ../BayesianPredictionPlot.jpeg Graphic file (type jpg)
+<use ../BayesianPredictionPlot.jpeg>
+Package pdftex.def Info: ../BayesianPredictionPlot.jpeg  used on input line 131
+.
+(pdftex.def)             Requested size: 256.07274pt x 256.08488pt.
+ [5 <../FreqResult.jpeg> <../ACFPlot.png>] [6 <../BayesianPredictionPlot.jpeg>]
+ [7] [8] [9] [10] (./Project Report.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.6pt have occurred.
@@ -628,10 +526,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6074 strings out of 492616
- 86696 string characters out of 6129482
+ 6103 strings out of 492616
+ 87623 string characters out of 6129482
  211171 words of memory out of 5000000
- 9879 multiletter control sequences out of 15000+600000
+ 9919 multiletter control sequences out of 15000+600000
  14037 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,12n,43p,1200b,1677s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -650,10 +548,10 @@ e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 /2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2
 019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/20
 19/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on "Project Report.pdf" (10 pages, 208693 bytes).
+Output written on "Project Report.pdf" (10 pages, 735457 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 111 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
